@@ -1,5 +1,6 @@
 import { createLinkedList } from './LinkedList';
 
+//리스트 뒤집기
 export const reverseLinkedList = head => {
   //반복구조로 뒤집기
   let prev = null;

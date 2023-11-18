@@ -12,3 +12,15 @@ export function maxProfit(prices) {
 const input = [7, 1, 5, 3, 6, 4];
 console.log(maxProfit(input));
 // output: 5
+
+const test = prices => {
+  let profit = 0;
+  let min = prices[0];
+  for (const stock of prices) {
+    min = Math.min(min, stock);
+    profit = Math.max(profit, stock - min);
+  }
+  return profit;
+};
+
+console.log(test(input));

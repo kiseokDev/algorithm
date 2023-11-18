@@ -1,5 +1,6 @@
 //연결 리스트를 입력받아 pair 단위로 스왑하라
 // input: 1->2->3->4
+//output: 2->1->4->3
 
 import { createLinkedList, linkedListToArray } from './LinkedList';
 
@@ -26,3 +27,10 @@ export const swapPairsWithArray = arr => {
   }
   return result;
 };
+
+const test = arr => {
+  return arr.map((num, idx) => (idx % 2 === 0 ? arr[idx + 1] : arr[idx - 1]));
+};
+
+const input = [1, 2, 3, 4];
+console.log(test(input));

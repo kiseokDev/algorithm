@@ -32,10 +32,21 @@ export function isPalinDrome(head) {
   return true;
 }
 
-export const isPalindromeUsingStack = arr => {
-  const stack = [...arr];
+// export const test = arr => {
+//   const stack = [...arr];
 
-  for (let i = 0; i < arr.length; i++) {
+//   for (let i = 0; i < arr.length; i++) {
+//     if (stack.pop() !== arr[i]) {
+//       return false;
+//     }
+//   }
+
+//   return true;
+// };
+export const isPalindromeUsingStack = arr => {
+  const stack = [...arr.slice(0, Math.floor(arr.length / 2))];
+
+  for (let i = Math.ceil(arr.length / 2); i < arr.length; i++) {
     if (stack.pop() !== arr[i]) {
       return false;
     }
@@ -43,3 +54,14 @@ export const isPalindromeUsingStack = arr => {
 
   return true;
 };
+
+export const isPalindromeUsingReverse = s => s === [...s].reverse().join('');
+export const test = arr => {
+  const stack = [...arr];
+  for (const num of arr) {
+    if (stack.pop() !== num) return false;
+  }
+  return true;
+};
+
+console.log(test([1, 2, 2, 3, 1]));

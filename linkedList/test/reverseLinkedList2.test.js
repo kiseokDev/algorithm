@@ -1,7 +1,7 @@
 // FILEPATH: /home/prime/workspace/algorithm/linkedList/test/reverseLinkedList2.test.js
-import { reverseBetween, reverseBetweenWithArray } from '../reverseLinkedList2';
+import { reverseBetween } from '../reverseLinkedList2';
 import { createLinkedList, linkedListToArray } from '../LinkedList';
-// import { reverseBetween, reverseBetweenWithArray } from './pratice';
+import { reverseBetweenWithArray } from './pratice';
 
 describe('reverseBetween', () => {
   test('reverses the nodes of a linked list from position m to n', () => {

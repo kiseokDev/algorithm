@@ -1,5 +1,4 @@
-import { isPalinDrome, isPalindromeUsingStack } from '../palindrome';
-// import { isPalinDrome, isPalindromeUsingStack } from './pratice';
+import { isPalindromeUsingStack } from './pratice';
 
 describe('isPalinDrome', () => {
   test('returns true for a palindrome linked list', () => {

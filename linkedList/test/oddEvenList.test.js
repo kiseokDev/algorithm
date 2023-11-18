@@ -1,7 +1,7 @@
 // FILEPATH: /home/prime/workspace/algorithm/array/oddEvenList.test.js
-import { oddEvenListWithArray, oddEvenList } from '../oddEvenList';
+import { oddEvenList } from '../oddEvenList';
 import { createLinkedList, linkedListToArray } from '../LinkedList';
-// import { oddEvenListWithArray, oddEvenList } from './pratice';
+import { oddEvenListWithArray } from './pratice';
 
 describe('oddEvenListWithArray', () => {
   test('rearranges an array so that all odd-indexed elements come before all even-indexed elements', () => {

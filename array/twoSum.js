@@ -42,3 +42,5 @@ function twoSumWithTwoPointer(nums, target) {
     }
   }
 }
+
+const test = [];

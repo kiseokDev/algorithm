@@ -1,6 +1,6 @@
 // FILEPATH: /home/prime/workspace/algorithm/array/addTwoNumbers.test.js
-import { addTwoNumbers, addTwoNumbersWithLinkedList } from '../addTwoNums';
-// import { addTwoNumbers, addTwoNumbersWithLinkedList } from './pratice';
+import { addTwoNumbersWithLinkedList } from '../addTwoNums';
+import { addTwoNumbers } from './pratice';
 import { createLinkedList } from '../LinkedList';
 
 describe('addTwoNumbers', () => {

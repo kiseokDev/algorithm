@@ -1,5 +1,5 @@
-import { swapPairs, swapPairsWithArray } from '../swapPairs';
-// import { swapPairs, swapPairsWithArray } from './pratice';
+import { swapPairs } from '../swapPairs';
+import { swapPairsWithArray } from './pratice';
 import { createLinkedList, linkedListToArray } from '../LinkedList';
 // Helper function to create a linked list from an array
 

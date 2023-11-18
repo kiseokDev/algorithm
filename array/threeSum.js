@@ -31,41 +31,33 @@ console.log(arr);
 
 export function ThreeSumTest(arr) {
   const result = [];
-  //정렬하기
   arr.sort();
-  //for문
   for (let i = 0; i < arr.length; i++) {
-    //중복된값 스킵if
-    if (i > 0 && arr[i] === arr[i - 1]) continue;
-    //left right 초기화
-    // right는 항상 맨끝
-    // left는 for문보다 +1
+    const element = arr[i];
     let left = i + 1;
     let right = arr.length - 1;
-    // while문 left가 right보다 작을때
     while (left < right) {
-      //간격을 좁혀가며 합 계산
-      const sum = arr[i] + arr[left] + arr[right];
+      let sum = arr[i] + arr[left] + arr[right];
       if (sum < 0) {
         left++;
       } else if (sum > 0) {
         right--;
       } else {
-        //답을 찾으면 left,right 양옆의 값을 확인해서 같을시 포인터 이동
         result.push([arr[i], arr[left], arr[right]]);
-        while (left < right && arr[left] === arr[left + 1]) left++;
-        while (left < right && arr[right] === arr[right - 1]) right--;
-        //포인터 이동
+        while (arr[left] !== arr[left + 1]) {
+          left++;
+        }
+        while (arr[right] !== arr[right - 1]) {
+          right--;
+        }
         left++;
         right--;
       }
     }
-    return result;
   }
-
-  console.log(arr);
+  return result;
 }
-console.log(ThreeSumTest(arr));
+console.log(ThreeSumTest(arr)); //[ [ -1, -1, 2 ], [ -1, 0, 1 ] ]
 //정렬하기
 //for문
 //중복된값 스킵if

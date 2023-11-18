@@ -1,6 +1,6 @@
 // Helper function to convert a linked list to an array
-import { mergeTwoLinkedLists, mergeTwoLists } from '../mergeTwoSortedLists';
-// import { mergeTwoLinkedLists, mergeTwoLists } from './pratice';
+import { mergeTwoLinkedLists } from '../mergeTwoSortedLists';
+import { mergeTwoLists } from './pratice';
 import { createLinkedList, linkedListToArray } from '../LinkedList';
 
 describe('mergeTwoLists', () => {
