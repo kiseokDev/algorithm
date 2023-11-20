@@ -31,5 +31,33 @@ function letterCombination(digits) {
   return result;
 }
 
-console.log(letterCombination('23'));
+function letterCombinations(digits) {
+  const result = [];
+  const dic = {
+    2: 'abc',
+    3: 'def',
+    4: 'ghi',
+    5: 'jkl',
+    6: 'mno',
+    7: 'pqrs',
+    8: 'tuv',
+    9: 'wxyz',
+  };
+  function dfs(index, str) {
+    if (str.length === digits.length) {
+      result.push(str);
+      return;
+    }
+    const letters = dic[digits[index]];
+    for (let i = 0; i < letters.length; i++) {
+      dfs(index + 1, str + letters[i]);
+    }
+  }
+
+  if (digits.length === 0) return result;
+  dfs(0, '');
+  return result;
+}
+
+console.log(letterCombinations('23'));
 //["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"]
